@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Logo } from "@/components/Logo";
+import { ContactButton } from "@/components/ContactButton";
 import { useReveal } from "@/hooks/use-reveal";
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -102,6 +103,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <ContactButton />
     </div>
   );
 }
