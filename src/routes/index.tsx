@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Logo } from "@/components/Logo";
 import { useReveal } from "@/hooks/use-reveal";
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 import heroBottle from "@/assets/hero-bottle.jpg";
 import projectImg from "@/assets/project.jpg";
@@ -13,6 +14,39 @@ import evBap from "@/assets/event-baptism.jpg";
 import evBday from "@/assets/event-birthday.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+          logo: OG_IMAGE,
+          description: SITE_DESCRIPTION,
+          email: "elisabetta@uniqueparfume.com",
+          telephone: "+39-339-5345486",
+          address: [
+            {
+              "@type": "PostalAddress",
+              streetAddress: "Via Acqua delle Noci 4",
+              addressLocality: "Mercogliano",
+              addressRegion: "AV",
+              postalCode: "83013",
+              addressCountry: "IT",
+            },
+            {
+              "@type": "PostalAddress",
+              streetAddress: "Via Como",
+              addressLocality: "Milano",
+              addressCountry: "IT",
+            },
+          ],
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
