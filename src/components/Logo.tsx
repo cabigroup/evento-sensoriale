@@ -1,6 +1,6 @@
-const LOGO_SRC = "/logo.jpeg";
+const LOGO_SRC = "/logo-mark.png";
 
-export function Logo({ size = 56 }: { size?: number }) {
+export function Logo({ size = 72 }: { size?: number }) {
   return (
     <img
       src={LOGO_SRC}

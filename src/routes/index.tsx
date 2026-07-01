@@ -129,7 +129,7 @@ function Header() {
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-12">
         <a href="#top" className="flex items-center gap-3" aria-label="Unique Parfume">
-          <Logo size={scrolled ? 44 : 56} />
+          <Logo size={scrolled ? 60 : 80} />
         </a>
         <nav className="hidden lg:flex items-center gap-10">
           {NAV.map((n) => (
@@ -256,7 +256,7 @@ function Reveal({ children, delay = 0, as: As = "div" as any, className = "" }: 
 
 function Project() {
   return (
-    <section id="progetto" className="relative py-32 md:py-48">
+    <section id="progetto" className="relative py-20 md:py-48">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-16 px-6 md:grid-cols-12 md:gap-20 md:px-12">
         <div className="md:col-span-5">
           <Reveal>
@@ -316,7 +316,7 @@ function Project() {
 
 function Events() {
   return (
-    <section id="eventi" className="relative py-32 md:py-48">
+    <section id="eventi" className="relative py-20 md:py-48">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -367,7 +367,7 @@ function Memory() {
   return (
     <section
       id="ricordo"
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-ink py-32"
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-ink py-20 md:py-32"
     >
       <div
         className="absolute inset-0 opacity-40"
@@ -413,7 +413,7 @@ function Contact() {
   return (
     <section
       id="contatti"
-      className="relative flex min-h-[90vh] items-center justify-center bg-ink py-32"
+      className="relative flex min-h-[80vh] items-center justify-center bg-ink py-20 md:py-32"
     >
       <div className="mx-auto max-w-3xl px-6 text-center">
         <Reveal>
@@ -455,7 +455,7 @@ function Footer() {
         <span className="hairline mb-14" />
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-4 flex flex-col gap-4">
-            <Logo size={64} />
+            <Logo size={104} />
             <p className="mt-2 max-w-xs text-xs leading-[1.9] text-ivory-dim/80">
               Fragranze personalizzate come omaggio memorabile per i tuoi eventi.
             </p>
