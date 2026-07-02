@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "PostalAddress",
-              streetAddress: "Via Como",
+              streetAddress: "Corso Como",
               addressLocality: "Milano",
               addressCountry: "IT",
             },
