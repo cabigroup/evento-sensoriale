@@ -42,6 +42,16 @@ export const Route = createFileRoute("/")({
               streetAddress: "Corso Como",
               addressLocality: "Milano",
               addressCountry: "IT",
+              name: "Unità dislocata",
+            },
+            {
+              "@type": "PostalAddress",
+              streetAddress: "Via Ferreria 71",
+              addressLocality: "Baronissi",
+              addressRegion: "SA",
+              postalCode: "84081",
+              addressCountry: "IT",
+              name: "Unità dislocata",
             },
           ],
         }),
@@ -500,7 +510,8 @@ function Footer() {
           <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
             <p className="eyebrow mb-4 !text-[0.65rem]">Sedi</p>
             <p>Sede legale — Via Acqua delle Noci 4, 83013 Mercogliano (AV)</p>
-            <p>Sede operativa — Corso Como, Milano</p>
+            <p>Unità dislocata — Corso Como, Milano</p>
+            <p>Unità dislocata — Via Ferreria 71, 84081 Baronissi (SA)</p>
           </div>
         </div>
         <p className="mt-16 text-center text-[0.65rem] uppercase tracking-[0.35em] text-ivory-dim/50">
