@@ -196,7 +196,7 @@ function Hero() {
         alt=""
         width={1600}
         height={1808}
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 h-full w-full object-cover opacity-85"
       />
       <div className="image-veil" />
       <div
@@ -353,7 +353,7 @@ function Events() {
                     loading="lazy"
                     width={1200}
                     height={1400}
-                    className="h-full w-full object-cover grayscale-[35%] transition-all duration-[1400ms] ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
+                    className="h-full w-full object-cover grayscale-[15%] transition-all duration-[1400ms] ease-out group-hover:scale-[1.03] group-hover:grayscale-0"
                   />
                   <div className="image-veil" />
                   <div className="absolute inset-x-6 bottom-6 h-px bg-gold/40" />
@@ -447,7 +447,7 @@ function Contact() {
         </Reveal>
         <Reveal delay={500}>
           <p className="mt-12 text-sm leading-[1.9] text-ivory-dim md:text-base">
-            Per informazioni e preventivi, la nostra referente Elisabetta
+            Per informazioni e preventivi, la nostra responsabile commerciale Elisabetta
             <br className="hidden sm:block" />
             {" "}risponde al{" "}
             <span className="text-ivory">339 5345486</span>.
@@ -472,7 +472,7 @@ function Footer() {
           </div>
           <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
             <p className="eyebrow mb-4 !text-[0.65rem]">Contatti</p>
-            <p className="text-ivory-dim">Referente Elisabetta</p>
+            <p className="text-ivory-dim">Responsabile commerciale Elisabetta</p>
             <p>
               Tel ·{" "}
               <a
