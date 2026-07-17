@@ -86,9 +86,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    color-mix(in oklab, black 25%, transparent) 0%,
-    color-mix(in oklab, black 15%, transparent) 40%,
-    color-mix(in oklab, black 55%, transparent) 100%
+    color-mix(in oklab, black 12%, transparent) 0%,
+    color-mix(in oklab, black 6%, transparent) 40%,
+    color-mix(in oklab, black 35%, transparent) 100%
   );
   pointer-events: none;
 }
