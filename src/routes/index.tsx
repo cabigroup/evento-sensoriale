@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
               streetAddress: "Corso Como",
               addressLocality: "Milano",
               addressCountry: "IT",
-              name: "Unità dislocata",
+              name: "Ufficio Commerciale",
             },
             {
               "@type": "PostalAddress",
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
               addressRegion: "SA",
               postalCode: "84081",
               addressCountry: "IT",
-              name: "Unità dislocata",
+              name: "Ufficio Commerciale",
             },
           ],
         }),
@@ -472,35 +472,45 @@ function Footer() {
           </div>
           <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
             <p className="eyebrow mb-4 !text-[0.65rem]">Contatti</p>
-            <p className="text-ivory-dim">Responsabile commerciale Elisabetta</p>
-            <p>
-              Tel ·{" "}
-              <a
-                href="tel:+393395345486"
-                className="text-gold/90 hover:text-gold transition-colors"
-              >
-                339 5345486
-              </a>
-            </p>
-            <p>
-              WhatsApp ·{" "}
-              <a
-                href="https://wa.me/393395345486"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gold/90 hover:text-gold transition-colors"
-              >
-                Scrivici ora
-              </a>
-            </p>
-            <p className="break-words">
-              <a
-                href="mailto:elisabetta@uniqueparfume.com"
-                className="text-gold/90 hover:text-gold transition-colors"
-              >
-                elisabetta@uniqueparfume.com
-              </a>
-            </p>
+            <div>
+              <p className="text-ivory-dim">Daniele De Ponte</p>
+              <p>CEO</p>
+            </div>
+            <div className="!mt-4">
+              <p className="text-ivory-dim">Elisabetta Maccanico</p>
+              <p>Responsabile Commerciale</p>
+            </div>
+            <div className="!mt-4 space-y-2">
+              <p>
+                Tel:{" "}
+                <a
+                  href="tel:+393395345486"
+                  className="text-gold/90 hover:text-gold transition-colors"
+                >
+                  339 534 5486
+                </a>
+              </p>
+              <p>
+                WhatsApp:{" "}
+                <a
+                  href="https://wa.me/393395345486"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold/90 hover:text-gold transition-colors"
+                >
+                  Scrivici ora
+                </a>
+              </p>
+              <p className="break-words">
+                Email:{" "}
+                <a
+                  href="mailto:elisabetta@uniqueparfume.com"
+                  className="text-gold/90 hover:text-gold transition-colors"
+                >
+                  elisabetta@uniqueparfume.com
+                </a>
+              </p>
+            </div>
           </div>
           <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
             <p className="eyebrow mb-4 !text-[0.65rem]">Società</p>
@@ -510,8 +520,8 @@ function Footer() {
           <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
             <p className="eyebrow mb-4 !text-[0.65rem]">Sedi</p>
             <p>Sede legale — Via Acqua delle Noci 4, 83013 Mercogliano (AV)</p>
-            <p>Unità dislocata — Corso Como, Milano</p>
-            <p>Unità dislocata — Via Ferreria 71, 84081 Baronissi (SA)</p>
+            <p>Ufficio Commerciale — Corso Como, Milano</p>
+            <p>Ufficio Commerciale — Via Ferreria 71, 84081 Baronissi (SA)</p>
           </div>
         </div>
         <p className="mt-16 text-center text-[0.65rem] uppercase tracking-[0.35em] text-ivory-dim/50">
