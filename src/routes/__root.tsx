@@ -11,6 +11,8 @@ import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import {
+  KLAVIYO_INIT_SNIPPET,
+  KLAVIYO_SRC,
   OG_IMAGE,
   SITE_DESCRIPTION,
   SITE_NAME,
@@ -113,6 +115,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap",
       },
+      { rel: "preconnect", href: "https://static.klaviyo.com" },
+    ],
+    // Klaviyo onsite tracking: <Scripts /> li rende in fondo al body su tutte le pagine.
+    scripts: [
+      { type: "text/javascript", async: true, src: KLAVIYO_SRC },
+      { type: "text/javascript", children: KLAVIYO_INIT_SNIPPET },
     ],
   }),
   shellComponent: RootShell,
