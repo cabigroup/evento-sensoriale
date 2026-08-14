@@ -10,15 +10,9 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import {
-  KLAVIYO_INIT_SNIPPET,
-  KLAVIYO_SRC,
-  OG_IMAGE,
-  SITE_DESCRIPTION,
-  SITE_NAME,
-  SITE_TITLE,
-  SITE_URL,
-} from "../lib/site";
+import { CookieBanner } from "../components/CookieBanner";
+import { ConsentScripts } from "../components/ConsentScripts";
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "../lib/site";
 
 function NotFoundComponent() {
   return (
@@ -106,7 +100,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: SITE_URL },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -115,13 +108,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap",
       },
-      { rel: "preconnect", href: "https://static.klaviyo.com" },
     ],
-    // Klaviyo onsite tracking: <Scripts /> li rende in fondo al body su tutte le pagine.
-    scripts: [
-      { type: "text/javascript", async: true, src: KLAVIYO_SRC },
-      { type: "text/javascript", children: KLAVIYO_INIT_SNIPPET },
-    ],
+    // Il tracciamento Klaviyo non è più caricato qui: viene inserito da
+    // <ConsentScripts /> solo dopo il consenso per la categoria marketing.
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -150,6 +139,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <ConsentScripts />
+      <CookieBanner />
     </QueryClientProvider>
   );
 }

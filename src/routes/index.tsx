@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Logo } from "@/components/Logo";
 import { ContactButton } from "@/components/ContactButton";
+import { SiteFooter } from "@/components/SiteFooter";
 import { useReveal } from "@/hooks/use-reveal";
 import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -16,6 +17,7 @@ import evBday from "@/assets/event-birthday.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "canonical", href: SITE_URL }],
     scripts: [
       {
         type: "application/ld+json",
@@ -112,7 +114,7 @@ function Index() {
         <Memory />
         <Contact />
       </main>
-      <Footer />
+      <SiteFooter />
       <ContactButton />
     </div>
   );
@@ -455,79 +457,5 @@ function Contact() {
         </Reveal>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-ink pb-14 pt-20">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <span className="hairline mb-14" />
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-12">
-          <div className="md:col-span-3 flex flex-col gap-4">
-            <Logo size={104} />
-            <p className="mt-2 max-w-xs text-xs leading-[1.9] text-ivory-dim/80">
-              Fragranze personalizzate come omaggio memorabile per i tuoi eventi.
-            </p>
-          </div>
-          <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
-            <p className="eyebrow mb-4 !text-[0.65rem]">Contatti</p>
-            <div>
-              <p className="text-ivory-dim">Daniele De Ponte</p>
-              <p>CEO</p>
-            </div>
-            <div className="!mt-4">
-              <p className="text-ivory-dim">Elisabetta Maccanico</p>
-              <p>Responsabile Commerciale</p>
-            </div>
-            <div className="!mt-4 space-y-2">
-              <p>
-                Tel:{" "}
-                <a
-                  href="tel:+393395345486"
-                  className="text-gold/90 hover:text-gold transition-colors"
-                >
-                  339 534 5486
-                </a>
-              </p>
-              <p>
-                WhatsApp:{" "}
-                <a
-                  href="https://wa.me/393395345486"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold/90 hover:text-gold transition-colors"
-                >
-                  Scrivici ora
-                </a>
-              </p>
-              <p className="break-words">
-                Email:{" "}
-                <a
-                  href="mailto:elisabetta@uniqueparfume.com"
-                  className="text-gold/90 hover:text-gold transition-colors"
-                >
-                  elisabetta@uniqueparfume.com
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
-            <p className="eyebrow mb-4 !text-[0.65rem]">Società</p>
-            <p>Unique Parfume è un progetto di Universal Commerce S.R.L.</p>
-            <p>P.IVA e C.F. 03236080648</p>
-          </div>
-          <div className="md:col-span-3 space-y-2 text-xs leading-[1.9] text-ivory-dim/80">
-            <p className="eyebrow mb-4 !text-[0.65rem]">Sedi</p>
-            <p>Sede legale — Via Acqua delle Noci 4, 83013 Mercogliano (AV)</p>
-            <p>Ufficio Commerciale — Corso Como, Milano</p>
-            <p>Ufficio Commerciale — Via Ferreria 71, 84081 Baronissi (SA)</p>
-          </div>
-        </div>
-        <p className="mt-16 text-center text-[0.65rem] uppercase tracking-[0.35em] text-ivory-dim/50">
-          © {new Date().getFullYear()} Unique Parfume
-        </p>
-      </div>
-    </footer>
   );
 }

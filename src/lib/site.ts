@@ -5,6 +5,10 @@ export const SITE_DESCRIPTION =
   "Fragranze personalizzate come omaggio memorabile per aperture, lanci, matrimoni e ricorrenze. Un profumo che resta. Un evento che non si dimentica.";
 export const OG_IMAGE = `${SITE_URL}/og-image.jpeg`;
 
+// Data di ultima revisione dei documenti legali (privacy e cookie policy):
+// va aggiornata a ogni modifica sostanziale dei testi.
+export const LEGAL_UPDATED_AT = "14 agosto 2026";
+
 export const KLAVIYO_COMPANY_ID = "XG8Hu5";
 export const KLAVIYO_SRC = `https://static.klaviyo.com/onsite/js/${KLAVIYO_COMPANY_ID}/klaviyo.js?company_id=${KLAVIYO_COMPANY_ID}`;
 
